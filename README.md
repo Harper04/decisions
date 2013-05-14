@@ -14,6 +14,8 @@ Hier ein proof of concept Beispiel in JSON. Die Implementierung mag sich z.B. du
 ```javascript
 decision:{
 	"type":"Personenwahl", #Personenwahl oder Abstimmung
+	"title":"Vorstandswahl Kleinstadt Ingolstadt"
+	"date":"2012-12-21"
 	"method":{
 		"name":"Schulze", #Abstimmverfahrensname
 		"preference":1, #TODO Hier muessen noch einstellungen der Verfahren auftauchen
@@ -23,7 +25,7 @@ decision:{
 	"votes":[
 		{
 			"ballotbox":1, #optional
-			"options":[
+			"voting":[
 				{
 					"option_id":1,
 					"value":0

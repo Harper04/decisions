@@ -5,13 +5,13 @@ Everything you need to publish/view or recount elections and votes based on diff
 
 # Ziele
 
-# Installieren
+# Installation
 
 # Datenmodell
 Es wurde versucht alle Interessanten Faelle und Informationen die im Kontext von Wahlen und Abstimmungen in den verschiedenen Verfahren auftauchen in einer Datenstruktur zu speichern. Falls Fehler oder Informationen hier nicht abbildbar sind bin ich offen fuer Vorschlaege.
 Hier ein proof of concept Beispiel in JSON. Die Implementierung mag sich z.B. durch IDs und/oder URLs unterscheiden
 
-'''json
+```javascript
 decision:{
 	"type":"Personenwahl", #Personenwahl oder Abstimmung
 	"method":{
@@ -53,7 +53,7 @@ decision:{
 		}
 	]
 }
-'''
+```
 
 Es fehlt: Die Speicherung des Ergebnisses sowie der Parameter fuer das angewandte Verfahren
 
@@ -61,12 +61,12 @@ Es fehlt: Die Speicherung des Ergebnisses sowie der Parameter fuer das angewandt
 Das 'value' Feld kann hier vieles ausdruecken je nachdem welches Verfahren verwendet wird.
 Einige Beispiele:
 * Schulze
-** Positive Werte stehen fuer ein Ja sowie die Sortierung
-** Negative Werte stehen fuer Nein mit der Sortierung
-** 0 Steht fuer Enthaltung
+ * Positive Werte stehen fuer ein Ja sowie die Sortierung
+ * Negative Werte stehen fuer Nein mit der Sortierung
+ * 0 Steht fuer Enthaltung
 * Approval
-** -1 Steht fuer Nein
-** +1 Steht fuer Ja
+ * -1 Steht fuer Nein
+ * +1 Steht fuer Ja
 * AV Verfahren
-** Negative Werte wie -1 ist Nein
-** Positive Werte geben direkt die Anzahl der vergebenen Punkte wieder
+ * Negative Werte wie -1 ist Nein
+ * Positive Werte geben direkt die Anzahl der vergebenen Punkte wieder
